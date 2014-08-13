@@ -1,0 +1,13 @@
+extends ../shared/template
+block content
+
+  h2 Add your new friend here:
+
+  form(method='post', action='/tasks')
+    label Name
+    input(name='name', type='text')
+    label Nickname
+    input(name='nickname', type='text')
+    label Phone
+    input(name='phone', type='text')
+    button Submit

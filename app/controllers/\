@@ -1,0 +1,9 @@
+extends ../shared/template
+block content
+
+reate Task
+  form(method='post', action='/tasks')
+    input(name='name', type='text')
+    input(name='nickname', type='text')
+    input(name='phone', type='text')
+    button Submit
