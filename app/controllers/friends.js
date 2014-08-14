@@ -13,7 +13,10 @@ exports.init = function(req, res){
 
 
 exports.index = function(req, res){
-  res.render('friends/index');
+  Friend.all(function(err, friends){
+    console.log(friends);
+    res.render('friends/index',{friends:friends});
+  });
 };
 exports.create = function(req, res){
   Friend.create(req.body, function(){
